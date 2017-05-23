@@ -1,0 +1,667 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+		position: relative;
+    width: 100%;
+    font-family:  "Microsoft YaHei";
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    background: #ebf7ff;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 767px) {
+	body {
+		width: 450px;
+		margin: auto;
+	}
+}
+
+/* bg begin */
+
+.yao-button {
+	display: none;
+	position: absolute;
+	top: 80px;
+	left: -200px;
+	padding: 8px 10px;
+	background: red;
+	border-radius: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 999;
+}
+
+@media screen and (min-width: 767px) {
+	.yao-button {
+		display: block;
+	}
+}
+
+.bg {
+	position: relative;
+	width: 100%;
+/* 	background: url(images/body_bg.png) transform no-repeat center center;
+	background-size: cover; */
+}
+
+.bg img {
+	width: 100%;
+}
+
+canvas {
+	position:fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.gift-box {
+	position: absolute;
+	top: 55%;
+	left: 38%;
+	width: 24%;
+	z-index: 6;
+	animation: gift-box-animation 3s ease-in-out;
+	-moz-animation: gift-box-animation 3s ease-in-out;
+	-webkit-animation: gift-box-animation 3s ease-in-out;
+	-o-animation: gift-box-animation 3s ease-in-out;
+	-ms-animation: gift-box-animation 3s ease-in-out;
+	display: none;
+}
+
+.hand {
+	position: absolute;
+	top: 62%;
+	left: 45%;
+	width: 10%;
+	z-index: 7;
+	display: none;
+}
+
+.hand img {
+	animation: hand-animate 0.6s ease-in-out infinite;
+	-moz-animation: hand-animate 0.6s ease-in-out infinite;
+	-webkit-animation: hand-animate 0.6s ease-in-out infinite;
+	-o-animation: hand-animate 0.6s ease-in-out infinite;
+	-ms-animation: hand-animate 0.6s ease-in-out infinite;
+}
+
+.sock {
+	width: 16%;
+	position: absolute;
+	top: 0;
+	right: 2%;
+}
+
+.sock .bt-sock {
+	position: absolute;
+	top: 52%;
+	left: 0;
+	width: 100%;
+	height: 18%;
+	cursor: pointer;
+}
+
+.music {
+	position: absolute;
+	top: 3%;
+	right: 4%;
+	width: 2rem;
+	height: 2rem;
+	z-index: 999;
+}
+
+.control {
+	width: 100%;
+	height: 100%;
+	background: url(http://oss.szzbmy.com/rp2/apps/static/widget/music/music_off_8d94020.png) transparent no-repeat center center;
+	background-size: 100% 100%;
+	animation: music 1.2s linear infinite;
+	-moz-animation: music 1.2s linear infinite;
+	-webkit-animation: music 1.2s linear infinite;
+	-o-animation: music 1.2s linear infinite;
+	-ms-animation: music 1.2s linear infinite;
+}
+
+.nine-gift-box {
+	width: 50%;
+	position: absolute;
+	top: 35%;
+	left: 25%;
+}
+
+.gift-box01 {
+	overflow: hidden;
+	width: 24%;
+	margin: 9% 0 0 38%;
+}
+
+.gift-box02 {
+	overflow: hidden;
+	width: 55%;
+	margin-left: 20%;
+}
+
+.gift-box02 span {
+	float: left;
+	width: 40%;
+
+}
+
+.gift-box03 {
+	overflow: hidden;
+	width: 74%;
+	margin-left: 12%;
+}
+
+.gift-box03 span {
+	float: left;
+	width: 26%;
+	margin-right: 10%;
+	margin-top: 6%;
+}
+
+.gift-box04 {
+	overflow: hidden;
+	width: 80%;
+	margin-left: 8%;
+}
+
+.gift-box04 span {
+	float: left;
+	width: 26%;
+	margin-right: 10%;
+	margin-top: 7%;
+}
+
+.nine-gift-box img {
+	animation: nine-gift-box-animate 1s ease-in-out infinite;
+	-moz-animation: nine-gift-box-animate 1s ease-in-out infinite;
+	-webkit-animation: nine-gift-box-animate 1s ease-in-out infinite;
+	-o-animation: nine-gift-box-animate 1s ease-in-out infinite;
+	-ms-animation: nine-gift-box-animate 1s ease-in-out infinite;
+}
+
+.bt-rank {
+	position: absolute;
+	top: 84%;
+	left: 28%;
+	width: 44%;
+}
+
+.bt-rule {
+	position: absolute;
+	top: 91%;
+	left: 38%;
+	width: 22%;
+}
+
+/* bg end */
+
+.share {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: black;
+	opacity: 0.8;
+}
+
+@media screen and (min-width: 767px) {
+	.share {
+		width: 450px;
+		margin: auto;
+		position: absolute;
+	}
+}
+
+.prize,
+.my-prize,
+.prize-rule,
+.charts,
+.rule {
+	position: absolute;
+	top: 26%;
+	left: 10%;
+	width: 84%;
+	z-index: 7;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 1%;
+	width: 11%;
+}
+
+/* 摇出来的礼物点开后的窗口 */
+.prize01 {
+	margin-top: 10px;
+}
+
+.prize01 .bt-share img {
+	margin-top: 10px;
+}
+
+.prize01 p,
+.prize02 p {
+	line-height: 100%;
+	color: #fcee22;
+	margin-top: 5px;
+	margin-bottom: 9px;
+}
+
+/* 我的礼物 */
+.prize-main {
+	position: absolute;
+	top: 15%;
+	left: 14%;
+	width: 66%;
+}
+
+.prize-main h1 {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 150%;
+}
+
+.prize-main b,
+.charts-main p b {
+	font-size: 22px;
+	color: #fcee22;
+}
+
+.prize02 {
+	margin-top: 20px;
+}
+
+
+/* 我要兑奖 */
+.prize-rule-main {
+	width: 76%;
+	position: absolute;
+	top: 9%;
+	left: 9%;
+}
+
+.prize-rule-main h1 {
+	font-size: 18px;
+	line-height: 250%;
+	text-align: left;
+}
+
+.prize-rule-main span {
+	color: #fcee22;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.prize-rule-main span b {
+	font-size: 24px;
+}
+
+.prize-rule-main .input-tel {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.prize-rule-main .input-tel input {
+	text-align: center;
+	border: none;
+	width: 80%;
+	height: 2rem;
+	border-radius: 25px;
+}
+
+.prize-rule-main p {
+	margin-top: 25px;
+	line-height: 130%;
+	text-align: justify;
+}
+
+
+/* 排行榜 */
+.charts-main {
+	position: absolute;
+	top: 7%;
+	left: 7%;
+	width: 80%;
+}
+
+.charts-main h1 {
+	font-size: 18px;
+	line-height: 150%;
+}
+
+.charts-main p {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.charts-tab {
+	position: absolute;
+	bottom: 5%;
+	left: 7%;
+	width: 80%;
+	height: 60%;
+	border-top: 1px dashed white;
+	padding-top: 5px;
+}
+
+.charts-tab table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.charts-tab tr {
+	line-height: 150%;
+	overflow: hidden;
+}
+
+.charts-tab td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/* 活动规则 */
+.rule-text {
+	position: absolute;
+	top: 7%;
+	left: 7%;
+	width: 80%;
+	text-align: left;
+}
+
+.rule-text p {
+	padding-top: 5px;
+	line-height: 120%;
+	font-size: 11px;
+	text-align: justify;
+}
+
+
+/* 摇一摇礼盒出现动画  begin*/
+@keyframes gift-box-animation{
+	0%{transform: translate(0,-300px);}
+	30%{transform: translate(0,-300px);}
+	40%{transform: translate(0,0);}
+	42%{transform: scale(1.1, .6) skew(5deg, 5deg);}
+	48%{transform: scale(1) skew(0, 0);}
+	54%{transform: scale(1.05, 0.8) skew(4deg, 4deg);}
+	60%{transform: scale(1) skew(0, 0);}
+	64%{transform: skew(3deg, 3deg);}
+	68%{transform: skew(0, 0);}
+	75%{transform: skew(2deg, 2deg);}
+	83%{transform: skew(0, 0);}
+	92%{transform: skew(1deg, 1deg);}
+	100%{transform: skew(0, 0);}
+}
+
+@-moz-keyframes gift-box-animation {
+	0%{-moz-transform:translate(0,-300px);}
+	30%{-moz-transform:translate(0,-300px);}
+	40%{-moz-transform:translate(0,0);}
+	42%{-moz-transform:scale(1.1,.6) skew(5deg,5deg);}
+	48%{-moz-transform:scale(1) skew(0,0);}
+	54%{-moz-transform:scale(1.05,.8) skew(4deg,4deg);}
+	60%{-moz-transform:scale(1) skew(0,0);}
+	64%{-moz-transform:skew(3deg,3deg);}
+	68%{-moz-transform:skew(0,0);}
+	75%{-moz-transform:skew(2deg,2deg);}
+	83%{-moz-transform:skew(0,0);}
+	92%{-moz-transform:skew(1deg,1deg);}
+	100%{-moz-transform:skew(0,0);}
+}
+
+@-webkit-keyframes gift-box-animation {
+	0%{-webkit-transform:translate(0,-300px);}
+	30%{-webkit-transform:translate(0,-300px);}
+	40%{-webkit-transform:translate(0,0);}
+	42%{-webkit-transform:scale(1.1,.6) skew(5deg,5deg);}
+	48%{-webkit-transform:scale(1) skew(0,0);}
+	54%{-webkit-transform:scale(1.05,.8) skew(4deg,4deg);}
+	60%{-webkit-transform:scale(1) skew(0,0);}
+	64%{-webkit-transform:skew(3deg,3deg);}
+	68%{-webkit-transform:skew(0,0);}
+	75%{-webkit-transform:skew(2deg,2deg);}
+	83%{-webkit-transform:skew(0,0);}
+	92%{-webkit-transform:skew(1deg,1deg);}
+	100%{-webkit-transform:skew(0,0);}
+}
+
+@-o-keyframes gift-box-animation{
+	0%{-o-transform:translate(0,-300px);}
+	30%{-o-transform:translate(0,-300px);}
+	40%{-o-transform:translate(0,0);}
+	42%{-o-transform:scale(1.1,.6) skew(5deg,5deg);}
+	48%{-o-transform:scale(1) skew(0,0);}
+	54%{-o-transform:scale(1.05,.8) skew(4deg,4deg);}
+	60%{-o-transform:scale(1) skew(0,0);}
+	64%{-o-transform:skew(3deg,3deg);}
+	68%{-o-transform:skew(0,0);}
+	75%{-o-transform:skew(2deg,2deg);}
+	83%{-o-transform:skew(0,0);}
+	92%{-o-transform:skew(1deg,1deg);}
+	100%{-o-transform:skew(0,0);}
+}
+
+@-ms-keyframes gift-box-animation {
+	0%{-ms-transform:translate(0,-300px);}
+	30%{-ms-transform:translate(0,-300px);}
+	40%{-ms-transform:translate(0,0);}
+	42%{-ms-transform:scale(1.1,.6) skew(5deg,5deg);}
+	48%{-ms-transform:scale(1) skew(0,0);}
+	54%{-ms-transform:scale(1.05,.8) skew(4deg,4deg);}
+	60%{-ms-transform:scale(1) skew(0,0);}
+	64%{-ms-transform:skew(3deg,3deg);}
+	68%{-ms-transform:skew(0,0);}
+	75%{-ms-transform:skew(2deg,2deg);}
+	83%{-ms-transform:skew(0,0);}
+	92%{-ms-transform:skew(1deg,1deg);}
+	100%{-ms-transform:skew(0,0);}
+}
+/* 摇一摇礼盒出现动画  end*/
+
+
+/* 九个礼盒晃动动画 begin */
+@keyframes nine-gift-box-animate {
+	10%{transform: rotate(4deg);}
+	20%{transform: rotate(-4deg);}
+	30%{transform: rotate(3.5deg);}
+	40%{transform: rotate(-3.5deg);}
+	50%{transform: rotate(3deg);}
+	60%{transform: rotate(-3deg);}
+	70%{transform: rotate(2deg);}
+	80%{transform: rotate(-2deg);}
+	90%{transform: rotate(1deg);}
+	100%{transform: rotate(0)}
+}
+
+@-moz-keyframes nine-gift-box-animate {
+	10%{-moz-transform: rotate(4deg);}
+	20%{-moz-transform: rotate(-4deg);}
+	30%{-moz-transform: rotate(3.5deg);}
+	40%{-moz-transform: rotate(-3.5deg);}
+	50%{-moz-transform: rotate(3deg);}
+	60%{-moz-transform: rotate(-3deg);}
+	70%{-moz-transform: rotate(2deg);}
+	80%{-moz-transform: rotate(-2deg);}
+	90%{-moz-transform: rotate(1deg);}
+	100%{-moz-transform: rotate(0)}
+}
+
+@-webkit-keyframes nine-gift-box-animate {
+	10%{-webkit-transform: rotate(4deg);}
+	20%{-webkit-transform: rotate(-4deg);}
+	30%{-webkit-transform: rotate(3.5deg);}
+	40%{-webkit-transform: rotate(-3.5deg);}
+	50%{-webkit-transform: rotate(3deg);}
+	60%{-webkit-transform: rotate(-3deg);}
+	70%{-webkit-transform: rotate(2deg);}
+	80%{-webkit-transform: rotate(-2deg);}
+	90%{-webkit-transform: rotate(1deg);}
+	100%{-webkit-transform: rotate(0)}
+}
+
+@-o-keyframes nine-gift-box-animate{
+	10%{-o-transform: rotate(4deg);}
+	20%{-o-transform: rotate(-4deg);}
+	30%{-o-transform: rotate(3.5deg);}
+	40%{-o-transform: rotate(-3.5deg);}
+	50%{-o-transform: rotate(3deg);}
+	60%{-o-transform: rotate(-3deg);}
+	70%{-o-transform: rotate(2deg);}
+	80%{-o-transform: rotate(-2deg);}
+	90%{-o-transform: rotate(1deg);}
+	100%{-o-transform: rotate(0)}
+}
+
+@-ms-keyframes nine-gift-box-animate {
+	10%{-ms-transform: rotate(4deg);}
+	20%{-ms-transform: rotate(-4deg);}
+	30%{-ms-transform: rotate(3.5deg);}
+	40%{-ms-transform: rotate(-3.5deg);}
+	50%{-ms-transform: rotate(3deg);}
+	60%{-ms-transform: rotate(-3deg);}
+	70%{-ms-transform: rotate(2deg);}
+	80%{-ms-transform: rotate(-2deg);}
+	90%{-ms-transform: rotate(1deg);}
+	100%{-ms-transform: rotate(0)}
+}
+/* 九个礼盒晃动动画 end */
+
+/* 点击动画 */
+@keyframes hand-animate {
+	from{transform: rotateX(45deg);}
+	to{transform: rotateX(0);}
+}
+
+@-webkit-keyframes hand-animate {
+	from {
+		-webkit-transform: rotateX(45deg);
+	}
+	to {
+		-webkit-transform: rotateX(0deg);
+	}
+}
+
+@-moz-keyframes music {
+	from {
+		-moz-transform: rotateX(45deg);
+	}
+	to {
+		-moz-transform: rotateX(0deg);
+	}
+}
+
+@-o-keyframes music {
+	from {
+		-o-transform: rotateX(45deg);
+	}
+	to {
+		-o-transform: rotateX(0deg);
+	}
+}
+
+@-ms-keyframes music {
+	from {
+		-ms-transform: rotateX(45deg);
+	}
+	to {
+		-ms-transform: rotateX(0deg);
+	}
+}
+/* 点击动画 end */
+
+/* 音乐转动 */
+@keyframes music {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes music {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes music {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes music {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes music {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+/* 音乐转动 end */
+
+/* 适配小屏幕手机 */
+@media screen and (max-width: 360px) {
+	.prize-rule-main h1 {
+		font-size: 12px;
+	}
+	.prize-rule-main span b {
+		font-size: 16px;
+	}
+	.prize-rule-main .input-tel {
+		margin-top: 5px;
+	}
+	.prize-rule-main .input-tel input {
+		height: 1.5rem;
+	}
+	.prize-rule-main p {
+		margin-top: 10px;
+		line-height: 110%;
+		font-size: 8px;
+	}
+	.prize-rule-main {
+		width: 80%;
+	}
+}
+
+
+
+
+

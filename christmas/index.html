@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+
+	<title>Christmas</title>
+
+	<link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+	<!--模拟摇一摇按钮-->
+	<div class="yao-button">
+		PC端模拟摇一摇按钮
+	</div>
+
+	<!-- background -->
+	<div class="bg">
+		<img src="images/body_bg.png">
+		<canvas width="375" height="667" class="snow"></canvas>
+		<canvas width="375" height="736" class="flake"></canvas>
+
+		<!-- gift_box animate -->
+		<div class="gift-box">
+			<img src="images/box01.png">
+		</div>
+
+		<!-- hand -->
+		<div class="hand">
+			<img src="images/hand.jpg">
+		</div>
+
+		<!-- sock -->
+		<div class="sock">
+			<img src="images/sock.png" alt="sock">
+			<i class="bt-sock"></i>
+		</div>
+
+		<!-- audio -->
+		<div class="music">
+			<audio id="audio" autoplay="autoplay" loop="loop">
+				<source src="http://lxcdn.rabbitpre.com/6f4d9349-8bf0-456c-b144-f9e42fe0426b-8054" type="audio/mp3">
+			</audio>
+			<div class="control"></div>
+		</div>
+
+		<!-- nine gift box -->
+		<div class="nine-gift-box">
+			<div class="gift-box01">
+				<img src="images/box01.png">
+			</div>
+			<div class="gift-box02">
+				<span><img src="images/box04.png"></span>
+				<span style="float: right"><img src="images/box03.png"></span>
+			</div>
+			<div class="gift-box03">
+				<span><img src="images/box05.png"></span>
+				<span><img src="images/box02.png"></span>
+				<span style="margin-right: 0"><img src="images/box01.png"></span>
+			</div>
+			<div class="gift-box04">
+				<span><img src="images/box03.png"></span>
+				<span><img src="images/box04.png"></span>
+				<span style="margin-right: 0"><img src="images/box02.png"></span>
+			</div>
+		</div>
+
+		<!-- button rank -->
+		<div class="bt-rank">
+			<img src="images/rank.png" alt="rank">
+		</div>
+
+		<!-- button rule -->
+		<div class="bt-rule">
+			<img src="images/rule.png" alt="rule">
+		</div>
+	</div>
+
+	<!-- share -->
+	<div class="share" style="display: none">
+		<img src="images/share.png" alt="share">
+	</div>
+
+	<!-- 摇出来的礼物点开后的窗口 -->
+	<div class="prize" style="display: none">
+		<img src="images/wd-bg.png" alt="window background">
+		<i class="close">
+		<img src="images/close.png" alt="close">
+	</i>
+		<div class="prize-main">
+			<h1>恭喜你获得以下礼物</h1>
+			<div class="prize01">
+				<img src="images/gift.png" alt="gift">
+				<i class="bt-share">
+				<img src="images/bt-share.png" alt="share">
+			</i>
+				<p>狂摇抢中石化加油卡等豪礼！</p>
+				<i class="bt-again">
+				<img src="images/bt-again.png" alt="again">
+			</i>
+			</div>
+		</div>
+	</div>
+
+	<!-- 我的礼物 -->
+	<div class="my-prize" style="display: none">
+		<img src="images/wd-bg.png" alt="window background">
+		<i class="close">
+		<img src="images/close.png" alt="close">
+	</i>
+		<div class="prize-main">
+			<h1>
+				你已经累计<br> 获得
+				<b>10个</b>礼盒<br> 别忘了有钱大家赚
+			</h1>
+			<div class="prize02">
+				<i class="bt-share">
+				<img src="images/bt-buddy.png" alt="bt-buddy">
+			</i>
+				<p>狂摇抢中石化加油卡等豪礼！</p>
+				<i class="bt-buddy">
+				<img src="images/bt-prize.png" alt="bt-buddy">
+			</i>
+				<p>集齐10个礼盒兑换5折购买流量！</p>
+				<i class="bt-return">
+				<img src="images/bt-return.png" alt="bt-return">
+			</i>
+			</div>
+		</div>
+	</div>
+
+	<!-- 我要兑奖 -->
+	<div class="prize-rule" style="display: none">
+		<img src="images/wd-bg.png" alt="window background">
+		<i class="close">
+		<img src="images/close.png" alt="close">
+	</i>
+		<div class="prize-rule-main">
+			<h1>兑奖规则</h1>
+			<span>
+			您可以兑换<br>
+			<b>中石化加油卡</b>
+		</span>
+			<div class="input-tel">
+				<input type="text" placeholder="请输入手机号码">
+			</div>
+			<p>
+				一等奖：中石化1000元加油充值卡（5张）<br> 二等奖：中石化500元加油充值卡（10张）
+				<br> 三等奖：中石化100元加油充值卡（100张）
+				<br> 四等奖：老知青茶籽美体油50ml（3000瓶）
+				<br> 五等奖：原装进口爱敬可希丝顺滑洗发香波600ml， 折价购买原价72元，双蛋惊喜45元 10000名<br> 六等奖：5折购买1G手机流量。名额不限。
+				<br>
+			</p>
+		</div>
+	</div>
+
+	<!-- 排行榜 -->
+	<div class="charts" style="display: none">
+		<img src="images/wd-bg.png" alt="window background">
+		<i class="close">
+		<img src="images/close.png" alt="close">
+	</i>
+		<div class="charts-main">
+			<h1>圣诞树摇动次数排行榜</h1>
+			<p>你的树已被摇动<b>8</b>次</p>
+			<p>好友排行第<b>7</b>位</p>
+		</div>
+		<div class="charts-tab">
+			<table>
+				<tr>
+					<td width="30%">世界排名</td>
+					<td width="30%">微信名</td>
+					<td width="20%">次数</td>
+					<td width="20%">奖品</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>小小</td>
+					<td>66</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>如果他的名字特别长就像这样</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!-- 活动规则 -->
+	<div class="rule" style="display: none">
+		<img src="images/wd-bg.png" alt="window background">
+		<i class="close">
+		<img src="images/close.png" alt="close">
+	</i>
+		<div class="rule-text">
+			<p><b>活动时间：</b>2016年12月24日至2017年1月1日</p>
+			<p><b>兑奖时间：</b>2017年1月1日至2017年1月31日</p>
+			<p><b>活动规则：</b></p>
+			<p>
+				<!-- 1：摇一摇圣诞案例玩法<br>
+			2: 25-31号每个用户每天能摇一次，获得1-8个礼品盒<br>
+			3：每个用户每邀请一个好友进来助力增加一次摇动礼品的机会<br>
+			4：1月1号公布排行榜信息，根据礼品总数进行排行榜，对应相应的奖品<br>
+			5：圣诞摇红包案例里的手机小图标换成中石化加油卡<br>
+			6：玩法修改成摇动树时，掉落随机1-8个礼品，礼品自动进入“我的礼品”中<br> -->
+				这里写活动规则
+			</p>
+			<p><b>礼品兑换：</b></p>
+			<p>
+				这里写兑换规则
+			</p>
+			<!-- <p><b>礼品发放：</b></p>
+		<p>这边写礼品发放规则</p> -->
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.let_it_snow.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/shake.js"></script>
+</body>
+
+</html>
