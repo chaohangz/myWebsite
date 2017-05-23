@@ -1,0 +1,303 @@
+.content {
+    background: #f5f5f5;
+}
+
+.content .border {
+    -webkit-box-shadow: 0 0  7px #e4e4e4;
+    -moz-box-shadow: 0 0 7px #e4e4e4;
+    box-shadow: 0 0 7px #9ea0a1;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.content .con_box {
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.con_header {
+    padding-top: 40px;
+    padding-bottom: 22px;
+}
+
+.content .article {
+    float: left;
+    padding-left: 2px;
+}
+
+.content .article .art_block{
+    width: 650px;
+}
+
+.block_header {
+    overflow: hidden;
+    padding: 15px;
+}
+
+.block_header .user_portrait {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.block_header .user_box {
+    float: left;
+}
+
+.block_header .user_name {
+    font-size: 16px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+.block_header .sort {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #9a9a9a;
+    background: url("../image/icon.png") no-repeat;
+    background-size: 15px auto;
+    background-position: 3px -302px;
+}
+
+.block_header .time {
+    float: right;
+    font-size: 16px;
+    color: #929292;
+    padding-top: 15px;
+}
+
+.block_footer {
+    overflow: hidden;
+    padding: 15px 25px;
+}
+
+.block_footer a {
+    text-decoration: none;
+}
+
+.block_footer h2 {
+    font-size: 22px;
+    color: #636363;
+}
+
+.block_footer h2:hover {
+    color: #6cb2fd;
+}
+
+.block_footer p {
+    padding: 10px 0;
+    font-size: 15px;
+    color: #929292;
+}
+
+.block_footer .tag {
+    float: left;
+    font-size: 18px;
+    color: #b0b4b7;
+    font-weight: bold;
+    padding-left: 25px;
+    background: url("../image/cr_icon.gif") no-repeat;
+    background-size: 18px auto;
+    background-position: 3px -150px;
+}
+
+.block_footer .good_and_comment {
+    float: right;
+    overflow: hidden;
+}
+
+.block_footer .good_and_comment .good,
+.block_footer .good_and_comment .comment {
+    float: left;
+    font-size: 18px;
+    color: #b5b9bc;
+    padding-left: 40px;
+    background: url("../image/cr_icon.gif") no-repeat;
+    background-size: 18px auto;
+}
+
+.block_footer .good_and_comment .good {
+    background-position: 17px 2px;
+}
+
+.block_footer .good_and_comment .comment {
+    background-position: 15px -27px;
+}
+
+.art_more {
+    font-size: 15px;
+    color: #929292;
+    text-align: center;
+    cursor: pointer;
+    margin: 50px;
+}
+
+.right_block {
+    margin-right: 2px;
+    overflow: hidden;
+}
+
+.right_block .channel {
+    padding: 10px 10px 10px 15px;
+    float: right;
+    width: 275px;
+}
+
+.right_block h5 {
+    padding-left: 10px;
+    color: #898989;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.channel li {
+    padding-left: 25px;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    width: 81px;
+    margin-top: 10px;
+    background: url("../image/channel_icon.gif") no-repeat;
+    background-size: 20px auto;
+}
+
+.channel li a {
+    font-size: 17px;
+    color: #69707a;
+    text-decoration: none;
+}
+
+.channel .cr_1 {
+    background-position: 3px 2px;
+}
+.channel .cr_2 {
+    background-position: 3px -360px;
+}
+.channel .cr_3 {
+    background-position: 3px -540px;
+}
+.channel .cr_4 {
+    background-position: 3px -405px;
+}
+.channel .cr_5 {
+    background-position: 3px -675px;
+}
+.channel .cr_6 {
+    background-position: 3px -315px;
+}
+.channel .cr_7 {
+    background-position: 3px -225px;
+}
+.channel .cr_8 {
+    background-position: 3px -133px;
+}
+.channel .cr_9 {
+    background-position: 3px -88px;
+}
+.channel .cr_10 {
+    background-position: 3px -450px;
+}
+.channel .cr_11 {
+    background-position: 3px -44px;
+}
+.channel .cr_12 {
+    background-position: 3px -495px;
+}
+.channel .cr_13 {
+    background-position: 3px -269px;
+}
+.channel .cr_14 {
+    background-position: 3px -586px;
+}
+.channel .cr_15 {
+    background-position: 3px -180px;
+}
+.channel .cr_16 {
+    background-position: 3px -630px;
+}
+.channel .cr_17 {
+    background-position: 3px -767px;
+}
+.channel .cr_18 {
+    background-position: 3px -720px;
+}
+
+.right_block .picks,
+.right_block .forum,
+.right_block .diy_three,
+.right_block .yogo,
+.right_block .hot_topic {
+    float: right;
+    width: 275px;
+}
+
+.right_block .diy_three {
+    position: relative;
+    height: 338px;
+    overflow: hidden;
+}
+
+.right_block .diy_three #diy_slide {
+    overflow: hidden;
+    width: 831px;
+    position: absolute;
+}
+
+.right_block .diy_three li {
+    float: left;
+}
+
+.right_block .diy_three li img {
+    width: 277px;
+}
+
+.diy_three .diy_round {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 0 107px;
+}
+
+.diy_three .diy_round .round {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #b0b4b7;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hot_topic {
+    padding:  10px 15px 15px;
+}
+
+.hot_topic ul {
+    width: 240px;
+}
+
+.hot_topic ul li{
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    background: url(../images/headerbg.png) repeat-x;
+}
+
+#header .header_box {
+    width: 990px;
+    height: 105px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    padding-left: 20px;
+    float: left;
+}
+
+#header .search {
+    width: 210px;
+    height: 23px;
+    float: left;
+    margin: 20px;
+    color: #6e6e6e;
+    padding-left: 2px;
+}
+
+#header .main_nav {
+    position: absolute;
+    top: 67px;
+    width: 970px;
+    background: #4a4a4a;
+    padding-left: 20px;
+}
+
+#header .nav {
+    float: left;
+    padding: 10px 15px;
+    position: relative;
+}
+
+#header .nav>a {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#header .nav .second_menu {
+    display: none;
+    width: 474px;
+    background: white;
+    border: 1px solid #B1B1B1;
+    border-top: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 5px;
+}
+
+.nav .second_menu h3 {
+    float: left;
+    width: 75px;
+    padding-left: 20px;
+}
+
+.nav .second_menu h3 a {
+    color: black;
+}
+
+.nav .second_menu ul {
+    float: left;
+    width: 360px;
+}
+
+.nav .second_menu ul li {
+    float: left;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid #DFDFDF;
+}
+
+.nav .second_menu ul li a {
+    font-size: 0.8rem;
+    color: #444444;
+}
+
+
+/*content left list*/
+
+#content {
+    overflow: hidden;
+    width: 990px;
+    height: 570px;
+    margin: 10px auto;
+}
+
+#content .content_left {
+    width: 180px;
+    float: left;
+}
+
+.content_left .left_header {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    padding: 8px 13px;
+    background: #6e6e6e;
+}
+
+.content_left ul {
+    padding: 5px 13px 15px 13px;
+    border: 1px solid #6e6e6e;
+}
+
+.content_left h3 {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.content_left li {
+    width: 50%;
+    float: left;
+    padding: 3px 0;
+}
+
+.content_left li a {
+    font-size: 0.8rem;
+    color: #444444;
+}
+
+.content_left li a.promoted {
+    color: #F9044E;
+}
+
+.content_left li .hot {
+    display: inline-block;
+    height: 16px;
+    width: 21px;
+    background: url('../images/hot.gif');
+}
+
+.center_ads {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    width: 550px;
+    height: 320px;
+    overflow: hidden;
+}
+
+
+/*表面不起作用，但它让图片都放在一个地方，只显示一张，其他隐藏，让动画过度自然
+如果没有这个语句，五张img就会按顺序往下排，动画过渡时会有空白闪烁*/
+
+.center_ads img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.center_ads_text {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+.center_ads_text a {
+    float: left;
+    text-align: center;
+    width: 109px;
+    padding: 8px 0 4px 0;
+    margin-right: 1px;
+    background: rgba(54, 52, 67, 0.6);
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+a.chos {
+    background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
+    color: #FFFFFF;
+}
+
+.center_ads_text .last {
+    margin: 0;
+}
+
+.right_ads {
+    float: right;
+}
+
+.right_notice {
+    float: right;
+    width: 230px;
+    margin-top: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+.right_notice h3 {
+    padding: 5px 10px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.right_notice li {
+    padding: 0 0 4px 10px;
+}
+
+.right_notice li .tooltip {
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+#tooltip {
+    position: absolute;
+    border: 1px solid #333;
+    background: #f7f5d1;
+    padding: 1px;
+    font-size: 0.8rem;
+    color: #333;
+    display: none;
+}
+
+.bottom_ads {
+    float: left;
+    width: 790px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.bottom_ads_header {
+    height: 21px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.bottom_ads_header h3 {
+    float: left;
+}
+
+.bottom_ads_header ul {
+    float: right;
+}
+
+.bottom_ads_header ul li {
+    float: left;
+    padding-right: 8px;
+}
+
+.bottom_ads_header ul li a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px;
+    background: #E4E4E4;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.bottom_ads_header .active {
+    background: url("../images/chos.gif") no-repeat bottom transparent;
+    padding-bottom: 3px;
+}
+
+.bottom_ads_header .active a {
+    color: white;
+    background-color: #FA5889;
+}
+
+.bottom_ads_content {
+    width: 797px;
+    height: 166px;
+    margin-top: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bottom_ads_content #js_roll_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3200px;
+}
+
+.bottom_ads_content li {
+    float: left;
+    padding: 0 8px;
+    position: relative;
+}
+
+.imageOver {
+    background: url('../images/zoom.gif') no-repeat 50% 50%;
+    background-color: white;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    /* 针对 IE8 以及更早的版本 */
+}
+
+#footer {
+    margin: 20px;
+    font-size: 0.8rem;
+    color: #666666;
+    text-align: center;
+}
+
+
+/*detail 部分*/
+
+.info {
+    width: 310px;
+    margin: 0 10px;
+    float: left;
+}
+
+.big_img {
+    border: 1px solid #bbbbbb;
+    width: 310px;
+    height: 310px;
+    position: relative;
+}
+
+.look_big_img {
+    width: 310px;
+    display: block;
+    text-align: center;
+    /*居中*/
+    padding: 9px 0;
+}
+
+.change_img {
+    overflow: hidden;
+}
+
+.change_img ul li {
+    width: 60px;
+    height: 60px;
+    display: block;
+    float: left;
+    margin: 0 4px;
+    border: 1px solid #eeeeee;
+}
+
+.change_img li:hover {
+    border: 1px solid #898989;
+}
+
+.change_img li img {
+    width: 60px;
+}
+
+.text_info {
+    margin-top: 20px;
+}
+
+.text_info .buttom {
+    display: inline-block;
+    border: 1px solid #898989;
+    border-bottom: none;
+    font-size: 0.8rem;
+    padding: 4px 7px;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+.text_info .info_box {
+    border: 1px solid #898989;
+}
+
+.text_info .selected {
+    background: #6d84b4;
+    color: white;
+}
+
+.info_box li {
+    font-size: 0.8rem;
+    line-height: 20px;
+    display: none;
+}
+
+.shop_detail {
+    width: 460px;
+    float: left;
+}
+
+.shop_detail h3,
+.shop_detail p {
+    line-height: 25px;
+}
+
+.space {
+    letter-spacing: 10px;
+}
+
+.shop_detail .price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff5517;
+}
+
+.cloth_color div li {
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.cloth_color div li img {
+    width: 30px;
+    border: 1px solid #bbb;
+}
+
+.cloth_color .border {
+    border: 1px solid #ff6600;
+}
+
+.color_change img:hover,
+.cloth_size .size_box:hover {
+    border: 1px solid #ff6600;
+}
+
+.cloth_size .size_box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bbb;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cloth_size .bg {
+    background: #ff6600;
+}
+
+
+.score .rating {
+    overflow: hidden;
+    height: 16px;
+    width: 80px;
+    cursor: pointer;
+    text-indent: -9999em;
+    background: url('../images/star-matrix.gif') no-repeat 0 0;
+    position: relative;
+}
+
+.score .nostar {
+    background-position: 0 0;
+}
+.score .onestar {
+    background-position: 0 -16px;
+}
+.score .twostar {
+    background-position: 0 -32px;
+}
+.score .threestar {
+    background-position: 0 -48px;
+}
+.score .fourstar {
+    background-position: 0 -64px;
+}
+.score .fivestar {
+    background-position: 0 -80px;
+}
+
+.score .rating li a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999em;
+}
+.rating li.one a {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.rating li.two a {
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+.rating li.three a {
+    position: absolute;
+    left: 32px;
+    top: 0;
+}
+.rating li.four a {
+    position: absolute;
+    left: 48px;
+    top: 0;
+}
+.rating li.five a {
+    position: absolute;
+    left: 64px;
+    top: 0;
+}
+
+.shopping_cart {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#basic-dialog-warn {
+    display: none;
+    width: 500px;
+    height: 185px;
+    background: white;
+    border: 1px solid #55555e;
+    overflow: hidden;
+}
+.box-title {
+    font-size: 0.8rem;
+    padding:5px;
+    background: #37A7D7;
+}
+
+.tips {
+    margin:20px;
+    position: relative;
+}
+.tips-ico {
+    position: absolute;
+    left: 0;
+    top: 25px;
+}
+.tips-content {
+    width: 400px;
+    position: absolute;
+    left: 50px;
+    top: 15px;
+}
+.tips button {
+    position: absolute;
+    top: 100px;
+    right: 5px;
+}
+
+

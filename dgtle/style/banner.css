@@ -1,0 +1,68 @@
+#banner {
+    z-index: 1;
+    padding-top: 58px;
+    background: #3f4247;
+    margin: 0 auto;
+}
+
+#banner #banner_box {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1200px;
+    height: 420px;
+}
+
+#banner #banner_box #slide_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9999px;
+}
+
+#banner #banner_box li {
+    float: left;
+}
+
+#banner .small_img {
+    margin: 0 auto;
+    width: 1200px;
+    height: 112px;
+}
+
+#banner .small_img li {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 150px;
+    height: 112px;
+    border: 1px solid #636569;
+}
+
+#banner .small_img li img {
+    margin-left: -83px;
+    width: 314px;
+    height: 110px;
+}
+
+#banner .small_img li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 148px;
+    height: 112px;
+    background: #000;
+    opacity: 0.6;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#banner .small_img .active_slide {
+    border: 1px solid white;
+}
+
+#banner .small_img .active_slide:after {
+    opacity: 0.2;
+}
+
